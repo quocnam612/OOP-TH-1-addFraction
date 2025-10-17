@@ -90,7 +90,8 @@ expected<Fraction, string> Fraction::getFractionRetry(string message, int maxAtt
 }
 
 void Fraction::output() const {
-    cout << format("({}/{})", _numerator, _denominator);
+    if (_denominator == 1) cout << format("{}", _numerator);
+    else cout << format("({}/{})", _numerator, _denominator);
 } 
 
 int Fraction::gcd(int a, int b) {
@@ -139,6 +140,7 @@ bool Fraction::operator==(const Fraction& other) const {
 }
 
 ostream& operator<<(ostream& os, const Fraction& frac) {
-    os << format("{}/{}", frac._numerator, frac._denominator);
+    if (frac._denominator == 1) os << format("{}", frac._numerator);
+    else os << format("{}/{}", frac._numerator, frac._denominator);
     return os;
 }
