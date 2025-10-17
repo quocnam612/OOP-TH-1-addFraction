@@ -18,7 +18,8 @@ expected<tuple<Fraction, Fraction>, string> executeGetInputUseCase() {
 
 Fraction executePrintAddFractionsUseCase(const Fraction& a, const Fraction& b) {
     Fraction result = a + b;
-    cout << "\nTổng hai phân số " << a << " và " << b << " là: " << result << "\n";
+    cout << "\nTổng hai phân số " << a << " và " << b << " là: ";
+    result.output();
     return result;
 }
 

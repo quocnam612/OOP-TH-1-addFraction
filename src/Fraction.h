@@ -59,7 +59,8 @@ public:
     /**
      * @brief Xuất phân số ra màn hình.
      * 
-     * In ra theo định dạng (tử số / mẫu số).
+     * In ra theo định dạng hỗn số nếu tử số lớn hơn mẫu số,
+     * hoặc in ra dạng phân số thông thường.
      */
     void output() const;
     

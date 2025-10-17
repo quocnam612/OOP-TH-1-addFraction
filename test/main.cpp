@@ -68,12 +68,17 @@ TEST(AddFractions, ValidSum1) {
 }
 
 TEST(AddFractions, ValidSum2) {
-    bool found = executePrintAddFractions(Fraction(-5, -2), Fraction(1, -3), Fraction(13, 6), "13/6");
+    bool found = executePrintAddFractions(Fraction(-5, -2), Fraction(1, -3), Fraction(13, 6), "2 1/6");
     EXPECT_EQ(found, true);
 }
 
 TEST(AddFractions, ValidSum3) {
     bool found = executePrintAddFractions(Fraction(100, 20), Fraction(-20, 10), Fraction(3, 1), "3");
+    EXPECT_EQ(found, true);
+}
+
+TEST(AddFractions, ValidSum4) {
+    bool found = executePrintAddFractions(Fraction(-32, 9), Fraction(71, -18), Fraction(-15, 2), "-7 1/2");
     EXPECT_EQ(found, true);
 }
 
